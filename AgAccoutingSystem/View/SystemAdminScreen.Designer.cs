@@ -29,12 +29,33 @@ namespace AgAccoutingSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.ExitBttn = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // ExitBttn
+            // 
+            this.ExitBttn.Location = new System.Drawing.Point(310, 378);
+            this.ExitBttn.Name = "ExitBttn";
+            this.ExitBttn.Size = new System.Drawing.Size(75, 23);
+            this.ExitBttn.TabIndex = 0;
+            this.ExitBttn.Text = "Exit";
+            this.ExitBttn.UseVisualStyleBackColor = true;
+            this.ExitBttn.Click += new System.EventHandler(this.ExitBttn_Click);
+            // 
+            // System_Admin_Screen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ExitBttn);
+            this.Name = "System_Admin_Screen";
             this.Text = "System_Admin_Screen";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button ExitBttn;
     }
 }

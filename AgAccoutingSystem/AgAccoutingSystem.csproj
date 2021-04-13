@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ViewSubmissions.cs">
+    <Compile Include="View\ViewSubmissions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewSubmissions.Designer.cs">
+    <Compile Include="View\ViewSubmissions.Designer.cs">
       <DependentUpon>ViewSubmissions.cs</DependentUpon>
     </Compile>
     <Compile Include="View\SubmissionFrm.cs">
@@ -97,7 +97,13 @@
       <DependentUpon>User Screen.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Users.cs" />
-    <EmbeddedResource Include="ViewSubmissions.resx">
+    <EmbeddedResource Include="View\SubmissionFrm.resx">
+      <DependentUpon>SubmissionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SystemAdminScreen.resx">
+      <DependentUpon>SystemAdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewSubmissions.resx">
       <DependentUpon>ViewSubmissions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Accountant Screen.resx">

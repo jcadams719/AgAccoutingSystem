@@ -16,5 +16,12 @@ namespace AgAccoutingSystem
         {
             InitializeComponent();
         }
+
+        private void ExitBttn_Click(object sender, EventArgs e)
+        {
+            var signIn = new SignInFrm();
+            signIn.Show();
+            this.Hide();
+        }
     }
 }

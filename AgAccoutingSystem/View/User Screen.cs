@@ -28,12 +28,28 @@ namespace AgAccoutingSystem
 
         private void GetTransactionBttn_Click(object sender, EventArgs e)
         {
-
+            int accountNum = (int)aCCOUNTSDataGridView.SelectedCells[0].Value;
+            Query query = new Query();
+            
         }
 
         private void GetAccountsBttn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ExitBttn_Click(object sender, EventArgs e)
+        {
+            var signIn = new SignInFrm();
+            signIn.Show();
+            this.Hide();
+        }
+
+        private void SubmitTransBttn_Click(object sender, EventArgs e)
+        {
+            var submissionFrm = new SubmissionFrm();
+            submissionFrm.Show();
+            this.Hide();
         }
     }
 }

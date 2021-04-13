@@ -16,5 +16,17 @@ namespace AgAccoutingSystem
         {
             InitializeComponent();
         }
+
+        private void ExitBttn_Click(object sender, EventArgs e)
+        {
+            var userScreen = new User_Screen();
+            userScreen.Show();
+            this.Hide();
+        }
+
+        private void SubmitBttn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

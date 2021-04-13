@@ -31,6 +31,7 @@ namespace AgAccoutingSystem
         {
             this.ConfirmBttn = new System.Windows.Forms.Button();
             this.ExitBttn = new System.Windows.Forms.Button();
+            this.RejectBttn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ConfirmBttn
@@ -44,18 +45,29 @@ namespace AgAccoutingSystem
             // 
             // ExitBttn
             // 
-            this.ExitBttn.Location = new System.Drawing.Point(416, 373);
+            this.ExitBttn.Location = new System.Drawing.Point(276, 402);
             this.ExitBttn.Name = "ExitBttn";
-            this.ExitBttn.Size = new System.Drawing.Size(75, 23);
+            this.ExitBttn.Size = new System.Drawing.Size(156, 23);
             this.ExitBttn.TabIndex = 1;
             this.ExitBttn.Text = "Exit";
             this.ExitBttn.UseVisualStyleBackColor = true;
+            this.ExitBttn.Click += new System.EventHandler(this.ExitBttn_Click);
+            // 
+            // RejectBttn
+            // 
+            this.RejectBttn.Location = new System.Drawing.Point(357, 373);
+            this.RejectBttn.Name = "RejectBttn";
+            this.RejectBttn.Size = new System.Drawing.Size(75, 23);
+            this.RejectBttn.TabIndex = 3;
+            this.RejectBttn.Text = "Reject";
+            this.RejectBttn.UseVisualStyleBackColor = true;
             // 
             // ViewSubmissions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.RejectBttn);
             this.Controls.Add(this.ExitBttn);
             this.Controls.Add(this.ConfirmBttn);
             this.Name = "ViewSubmissions";
@@ -68,5 +80,6 @@ namespace AgAccoutingSystem
 
         private System.Windows.Forms.Button ConfirmBttn;
         private System.Windows.Forms.Button ExitBttn;
+        private System.Windows.Forms.Button RejectBttn;
     }
 }

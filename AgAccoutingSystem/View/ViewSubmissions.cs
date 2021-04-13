@@ -16,5 +16,12 @@ namespace AgAccoutingSystem
         {
             InitializeComponent();
         }
+
+        private void ExitBttn_Click(object sender, EventArgs e)
+        {
+            var acctScreen = new Accountant_Screen();
+            acctScreen.Show();
+            this.Hide();
+        }
     }
 }

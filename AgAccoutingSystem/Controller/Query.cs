@@ -8,5 +8,14 @@ namespace AgAccoutingSystem
 {
     class Query
     {
+
+        public Register[] getTransaction(int accountID)
+        {
+            
+            Register[] transactions = new Register[100];
+
+
+            return transactions;
+        }
     }
 }
