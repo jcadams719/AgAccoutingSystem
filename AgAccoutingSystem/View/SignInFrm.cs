@@ -40,8 +40,21 @@ namespace AgAccoutingSystem
                 {
                     var accountant = new Accountant_Screen();
                     accountant.Show();
+                    this.Hide();
                 }
-                this.Hide();
+                else if(user.Discipline == "User")
+                {
+                    var userScreen = new User_Screen();
+                    userScreen.Show();
+                    this.Hide();
+                }
+                else if(user.Discipline == "Administrator")
+                {
+                    var adminScreen = new System_Admin_Screen();
+                    adminScreen.Show();
+                    this.Hide();
+                }
+                
             }
         }
     }

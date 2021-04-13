@@ -30,23 +30,35 @@ namespace AgAccoutingSystem
         private void InitializeComponent()
         {
             this.ExitBttn = new System.Windows.Forms.Button();
+            this.ViewSubBttn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ExitBttn
             // 
-            this.ExitBttn.Location = new System.Drawing.Point(304, 311);
+            this.ExitBttn.Location = new System.Drawing.Point(387, 415);
             this.ExitBttn.Name = "ExitBttn";
-            this.ExitBttn.Size = new System.Drawing.Size(75, 23);
+            this.ExitBttn.Size = new System.Drawing.Size(128, 23);
             this.ExitBttn.TabIndex = 0;
             this.ExitBttn.Text = "Exit";
             this.ExitBttn.UseVisualStyleBackColor = true;
             this.ExitBttn.Click += new System.EventHandler(this.ExitBttn_Click);
+            // 
+            // ViewSubBttn
+            // 
+            this.ViewSubBttn.Location = new System.Drawing.Point(253, 415);
+            this.ViewSubBttn.Name = "ViewSubBttn";
+            this.ViewSubBttn.Size = new System.Drawing.Size(128, 23);
+            this.ViewSubBttn.TabIndex = 1;
+            this.ViewSubBttn.Text = "View Submissions";
+            this.ViewSubBttn.UseVisualStyleBackColor = true;
+            this.ViewSubBttn.Click += new System.EventHandler(this.button1_Click);
             // 
             // Accountant_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ViewSubBttn);
             this.Controls.Add(this.ExitBttn);
             this.Name = "Accountant_Screen";
             this.Text = "Accountant_Screen";
@@ -57,5 +69,6 @@ namespace AgAccoutingSystem
         #endregion
 
         private System.Windows.Forms.Button ExitBttn;
+        private System.Windows.Forms.Button ViewSubBttn;
     }
 }

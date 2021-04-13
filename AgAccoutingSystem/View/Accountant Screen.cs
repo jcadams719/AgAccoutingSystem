@@ -23,5 +23,12 @@ namespace AgAccoutingSystem
             login.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var viewSub = new ViewSubmissions();
+            viewSub.Show();
+            this.Hide();
+        }
     }
 }

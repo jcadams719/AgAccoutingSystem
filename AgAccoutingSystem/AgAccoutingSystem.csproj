@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewSubmissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSubmissions.Designer.cs">
+      <DependentUpon>ViewSubmissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SubmissionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SubmissionFrm.Designer.cs">
+      <DependentUpon>SubmissionFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Accountant Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +82,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\System Admin Screen.cs">
+    <Compile Include="View\SystemAdminScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\System Admin Screen.Designer.cs">
-      <DependentUpon>System Admin Screen.cs</DependentUpon>
+    <Compile Include="View\SystemAdminScreen.Designer.cs">
+      <DependentUpon>SystemAdminScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\User Accounts.cs" />
     <Compile Include="View\User Interface.cs" />
