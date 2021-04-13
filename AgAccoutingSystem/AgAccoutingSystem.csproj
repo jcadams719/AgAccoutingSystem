@@ -97,6 +97,9 @@
       <DependentUpon>User Screen.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Users.cs" />
+    <EmbeddedResource Include="ViewSubmissions.resx">
+      <DependentUpon>ViewSubmissions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Accountant Screen.resx">
       <DependentUpon>Accountant Screen.cs</DependentUpon>
     </EmbeddedResource>
