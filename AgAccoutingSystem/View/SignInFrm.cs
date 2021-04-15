@@ -45,6 +45,7 @@ namespace AgAccoutingSystem
                 else if(user.Discipline == "User")
                 {
                     var userScreen = new User_Screen();
+                    userScreen.getUser(user.UserID);
                     userScreen.Show();
                     this.Hide();
                 }

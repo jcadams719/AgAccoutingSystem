@@ -57,7 +57,7 @@ namespace AgAccoutingSystem
             // 
             // SubmitTransBttn
             // 
-            this.SubmitTransBttn.Location = new System.Drawing.Point(253, 386);
+            this.SubmitTransBttn.Location = new System.Drawing.Point(335, 393);
             this.SubmitTransBttn.Name = "SubmitTransBttn";
             this.SubmitTransBttn.Size = new System.Drawing.Size(153, 39);
             this.SubmitTransBttn.TabIndex = 0;
@@ -67,7 +67,7 @@ namespace AgAccoutingSystem
             // 
             // ExitBttn
             // 
-            this.ExitBttn.Location = new System.Drawing.Point(412, 386);
+            this.ExitBttn.Location = new System.Drawing.Point(494, 393);
             this.ExitBttn.Name = "ExitBttn";
             this.ExitBttn.Size = new System.Drawing.Size(153, 39);
             this.ExitBttn.TabIndex = 1;
@@ -77,7 +77,7 @@ namespace AgAccoutingSystem
             // 
             // GetTransactionBttn
             // 
-            this.GetTransactionBttn.Location = new System.Drawing.Point(94, 386);
+            this.GetTransactionBttn.Location = new System.Drawing.Point(176, 393);
             this.GetTransactionBttn.Name = "GetTransactionBttn";
             this.GetTransactionBttn.Size = new System.Drawing.Size(153, 39);
             this.GetTransactionBttn.TabIndex = 3;
@@ -183,7 +183,7 @@ namespace AgAccoutingSystem
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 189);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(746, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(746, 186);
             this.dataGridView1.TabIndex = 4;
             // 
             // User_Screen

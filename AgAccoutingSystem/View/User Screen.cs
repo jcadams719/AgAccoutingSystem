@@ -12,6 +12,7 @@ namespace AgAccoutingSystem
 {
     public partial class User_Screen : Form
     {
+        private string userID;
         public User_Screen()
         {
             InitializeComponent();
@@ -25,7 +26,10 @@ namespace AgAccoutingSystem
             this.aCCOUNTSTableAdapter.Fill(this.gROUP4DataSet.ACCOUNTS);
 
         }
-
+        public void getUser(string userName)
+        {
+            userID = userName;
+        }
         private void GetTransactionBttn_Click(object sender, EventArgs e)
         {
             int accountNum = (int)aCCOUNTSDataGridView.SelectedCells[0].Value;
