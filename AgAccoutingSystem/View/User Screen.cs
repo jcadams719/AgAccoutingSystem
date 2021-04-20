@@ -33,8 +33,9 @@ namespace AgAccoutingSystem
         }
         private void GetTransactionBttn_Click(object sender, EventArgs e)
         {
-            //int accountNum = (int)aCCOUNTSDataGridView.SelectedCells[0].Value;
+            int accountNum = (int)aCCOUNTSDataGridView.SelectedCells[0].Value;
             Query query = new Query();
+            Register[] transactions = query.getTransaction(accountNum);
             
         }
 

@@ -11,8 +11,10 @@ namespace AgAccoutingSystem
 
         public Register[] getTransaction(int accountID)
         {
-            
-            Register[] transactions = new Register[100];
+            string getTrans = "SELECT * FROM REGISTER LEFT JOIN ACCOUNTS ON REGISTER.ACCOUNTID = ACCOUNTS.ACCOUNTID WHERE ACCOUNTS.ACCOUNTID = "+ accountID +"";
+            Console.WriteLine(getTrans);
+            Register[] transactions = new Register[1000];
+
 
 
             return transactions;

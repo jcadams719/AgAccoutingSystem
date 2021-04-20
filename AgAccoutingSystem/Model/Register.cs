@@ -97,6 +97,18 @@ namespace AgAccoutingSystem
             set { status = value; }
         }
 
+        private string comment;
+        public string Comment
+        {
+            get { return comment; }
+            set { comment = value; }
+        }
 
+        private string pending;
+        public string Pending
+        {
+            get { return pending; }
+            set { pending = value; }
+        }
     }
 }
