@@ -20,10 +20,11 @@ namespace AgAccoutingSystem
 
         private void User_Screen_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'agDatabase.ACCOUNTS' table. You can move, or remove it, as needed.
+            this.aCCOUNTSTableAdapter1.Fill(this.agDatabase.ACCOUNTS);
             // TODO: This line of code loads data into the 'gROUP4DataSet.REGISTER' table. You can move, or remove it, as needed.
             this.rEGISTERTableAdapter.Fill(this.gROUP4DataSet.REGISTER);
-            // TODO: This line of code loads data into the 'gROUP4DataSet.ACCOUNTS' table. You can move, or remove it, as needed.
-            this.aCCOUNTSTableAdapter.Fill(this.gROUP4DataSet.ACCOUNTS);
+            
 
         }
         public void getUser(string userName)
@@ -32,7 +33,7 @@ namespace AgAccoutingSystem
         }
         private void GetTransactionBttn_Click(object sender, EventArgs e)
         {
-            int accountNum = (int)aCCOUNTSDataGridView.SelectedCells[0].Value;
+            //int accountNum = (int)aCCOUNTSDataGridView.SelectedCells[0].Value;
             Query query = new Query();
             
         }

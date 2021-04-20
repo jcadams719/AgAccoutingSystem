@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgDatabase.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\ViewSubmissions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +129,17 @@
     <EmbeddedResource Include="View\User Screen.resx">
       <DependentUpon>User Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AgDatabase.xsc">
+      <DependentUpon>AgDatabase.xsd</DependentUpon>
+    </None>
+    <None Include="AgDatabase.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AgDatabase.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AgDatabase.xss">
+      <DependentUpon>AgDatabase.xsd</DependentUpon>
+    </None>
     <None Include="GROUP4DataSet.xsc">
       <DependentUpon>GROUP4DataSet.xsd</DependentUpon>
     </None>
