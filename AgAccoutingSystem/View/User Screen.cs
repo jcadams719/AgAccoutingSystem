@@ -21,10 +21,11 @@ namespace AgAccoutingSystem
         private void User_Screen_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'agDatabase.ACCOUNTS' table. You can move, or remove it, as needed.
-            this.aCCOUNTSTableAdapter1.Fill(this.agDatabase.ACCOUNTS);
-            // TODO: This line of code loads data into the 'gROUP4DataSet.REGISTER' table. You can move, or remove it, as needed.
-            this.rEGISTERTableAdapter.Fill(this.gROUP4DataSet.REGISTER);
-            
+            Query query = new Query();
+            aCCOUNTSDataGridView.DataSource = query.getAccounts(userID);
+
+
+
 
         }
         public void getUser(string userName)
@@ -35,7 +36,7 @@ namespace AgAccoutingSystem
         {
             int accountNum = (int)aCCOUNTSDataGridView.SelectedCells[0].Value;
             Query query = new Query();
-            Register[] transactions = query.getTransaction(accountNum);
+            TransactionDataGridView.DataSource = query.getTransaction(accountNum);
             
         }
 

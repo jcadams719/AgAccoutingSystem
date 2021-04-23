@@ -33,7 +33,7 @@ namespace AgAccoutingSystem
             this.SubmitTransBttn = new System.Windows.Forms.Button();
             this.ExitBttn = new System.Windows.Forms.Button();
             this.GetTransactionBttn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TransactionDataGridView = new System.Windows.Forms.DataGridView();
             this.aCCOUNTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gROUP4DataSet = new AgAccoutingSystem.GROUP4DataSet();
             this.aCCOUNTSTableAdapter = new AgAccoutingSystem.GROUP4DataSetTableAdapters.ACCOUNTSTableAdapter();
@@ -45,11 +45,7 @@ namespace AgAccoutingSystem
             this.aCCOUNTSTableAdapter1 = new AgAccoutingSystem.AgDatabaseTableAdapters.ACCOUNTSTableAdapter();
             this.tableAdapterManager1 = new AgAccoutingSystem.AgDatabaseTableAdapters.TableAdapterManager();
             this.aCCOUNTSDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransactionDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gROUP4DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEGISTERBindingSource)).BeginInit();
@@ -88,13 +84,13 @@ namespace AgAccoutingSystem
             this.GetTransactionBttn.UseVisualStyleBackColor = true;
             this.GetTransactionBttn.Click += new System.EventHandler(this.GetTransactionBttn_Click);
             // 
-            // dataGridView1
+            // TransactionDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 189);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(746, 186);
-            this.dataGridView1.TabIndex = 4;
+            this.TransactionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TransactionDataGridView.Location = new System.Drawing.Point(12, 189);
+            this.TransactionDataGridView.Name = "TransactionDataGridView";
+            this.TransactionDataGridView.Size = new System.Drawing.Size(746, 186);
+            this.TransactionDataGridView.TabIndex = 4;
             // 
             // aCCOUNTSBindingSource
             // 
@@ -155,42 +151,11 @@ namespace AgAccoutingSystem
             // 
             // aCCOUNTSDataGridView
             // 
-            this.aCCOUNTSDataGridView.AutoGenerateColumns = false;
             this.aCCOUNTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.aCCOUNTSDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.aCCOUNTSDataGridView.DataSource = this.aCCOUNTSBindingSource1;
             this.aCCOUNTSDataGridView.Location = new System.Drawing.Point(12, 3);
             this.aCCOUNTSDataGridView.Name = "aCCOUNTSDataGridView";
             this.aCCOUNTSDataGridView.Size = new System.Drawing.Size(445, 180);
             this.aCCOUNTSDataGridView.TabIndex = 4;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ACCOUNTID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ACCOUNTID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "RESEARCHCENTER";
-            this.dataGridViewTextBoxColumn2.HeaderText = "RESEARCHCENTER";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "TYPE";
-            this.dataGridViewTextBoxColumn3.HeaderText = "TYPE";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "BALANCE";
-            this.dataGridViewTextBoxColumn4.HeaderText = "BALANCE";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // User_Screen
             // 
@@ -198,14 +163,14 @@ namespace AgAccoutingSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 452);
             this.Controls.Add(this.aCCOUNTSDataGridView);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TransactionDataGridView);
             this.Controls.Add(this.GetTransactionBttn);
             this.Controls.Add(this.ExitBttn);
             this.Controls.Add(this.SubmitTransBttn);
             this.Name = "User_Screen";
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Screen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransactionDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gROUP4DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEGISTERBindingSource)).EndInit();
@@ -227,15 +192,11 @@ namespace AgAccoutingSystem
         private GROUP4DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private GROUP4DataSetTableAdapters.REGISTERTableAdapter rEGISTERTableAdapter;
         private System.Windows.Forms.BindingSource rEGISTERBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TransactionDataGridView;
         private AgDatabase agDatabase;
         private System.Windows.Forms.BindingSource aCCOUNTSBindingSource1;
         private AgDatabaseTableAdapters.ACCOUNTSTableAdapter aCCOUNTSTableAdapter1;
         private AgDatabaseTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.DataGridView aCCOUNTSDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
