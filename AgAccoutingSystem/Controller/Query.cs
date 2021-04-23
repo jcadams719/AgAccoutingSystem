@@ -40,7 +40,7 @@ namespace AgAccoutingSystem
 
         public DataTable getAccounts(string userID)
         {
-            string getAccts = "";
+            string getAccts = "SELECT * FROM ACCOUNTS LEFT JOIN USERACCOUNTS ON ACCOUNTS.ACCOUNTID = USERACCOUNTS.ACCOUNTID WHERE USERACCOUNTS.USERID = '" + userID +"'";
             DataTable accounts = new DataTable();
             try
             {
