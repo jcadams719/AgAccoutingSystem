@@ -34,7 +34,7 @@ namespace AgAccoutingSystem
             // 
             // ExitBttn
             // 
-            this.ExitBttn.Location = new System.Drawing.Point(310, 378);
+            this.ExitBttn.Location = new System.Drawing.Point(454, 398);
             this.ExitBttn.Name = "ExitBttn";
             this.ExitBttn.Size = new System.Drawing.Size(75, 23);
             this.ExitBttn.TabIndex = 0;
