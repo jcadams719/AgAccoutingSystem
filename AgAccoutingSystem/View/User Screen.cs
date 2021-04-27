@@ -20,13 +20,8 @@ namespace AgAccoutingSystem
 
         private void User_Screen_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'agDatabase.ACCOUNTS' table. You can move, or remove it, as needed.
             Query query = new Query();
             aCCOUNTSDataGridView.DataSource = query.getAccounts(userID);
-
-
-
-
         }
         public void getUser(string userName)
         {
@@ -56,6 +51,7 @@ namespace AgAccoutingSystem
         {
             var submissionFrm = new SubmissionFrm();
             submissionFrm.Show();
+            submissionFrm.getID(userID);
             this.Hide();
         }
     }

@@ -14,7 +14,7 @@ namespace AgAccoutingSystem
         private string connString = "Data Source=BB-Enterprise.users.campus;Initial Catalog=GROUP4;Persist Security Info=True;User ID=Group4;Password=Grp4s2117";
         public DataTable getTransaction(int accountID)
         {
-            string getTrans = "SELECT * FROM REGISTER LEFT JOIN ACCOUNTS ON REGISTER.ACCOUNTID = ACCOUNTS.ACCOUNTID WHERE ACCOUNTS.ACCOUNTID = "+ accountID +"";
+            string getTrans = "SELECT * FROM REGISTER LEFT JOIN ACCOUNTS ON REGISTER.ACCOUNTID = ACCOUNTS.ACCOUNTID WHERE ACCOUNTS.ACCOUNTID = "+ accountID +" AND REGISTER.PENDING = 0";
             DataTable transactions = new DataTable();
             try
             {
@@ -26,7 +26,6 @@ namespace AgAccoutingSystem
                         SqlDataReader reader = cmd.ExecuteReader();
                         transactions.Load(reader);
                     }
-
                 }
             }
             catch(Exception ex)
