@@ -33,6 +33,49 @@ namespace AgAccoutingSystem
 
         private void SubmitBttn_Click(object sender, EventArgs e)
         {
+            string[] submissionArr = new string[15];
+
+            /* for (int i = 0; i <= 12; i++)
+             {
+                 submissionArr[i] = textbox1.Text;
+
+             }*/
+
+            submissionArr[0] = TransactionIDTxt.Text;
+            submissionArr[1] = CodeTxt.Text;
+            submissionArr[2] = AccountIDTxt.Text;
+            submissionArr[3] = DateTxt.Text;
+            submissionArr[4] = DocumentTxt.Text;
+            submissionArr[5] = SubAcctTxt.Text;
+            submissionArr[6] = VendorTxt.Text;
+            submissionArr[7] = ItemTxt.Text;
+            if(DepositTxt.Text != "")
+            {
+                submissionArr[8] = DepositTxt.Text;
+            }
+            else
+            {
+                submissionArr[8] = "0";
+            }
+            if (DepositTxt.Text != "")
+            {
+                submissionArr[9] = ExpenseTxt.Text;
+            }
+            else
+            {
+                submissionArr[9] = "0";
+            }
+            submissionArr[10] = YearTxt.Text;
+            submissionArr[11] = StatusTxt.Text;
+            submissionArr[12] = CommentTxt.Text;
+
+            Query query = new Query();
+            query.submitTransaction(submissionArr);
+
+            var originalUserScreen = new User_Screen();
+            originalUserScreen.getUser(UserID);
+            originalUserScreen.Show();
+            this.Hide();
 
         }
 

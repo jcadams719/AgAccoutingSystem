@@ -86,5 +86,48 @@ namespace AgAccoutingSystem
 
             return accounts;
         }
+
+        public void submitTransaction(string[] arr)
+        {
+
+
+            int code = Int32.Parse(arr[1]);
+            int accountID = Int32.Parse(arr[2]);
+            DateTime date = Convert.ToDateTime(arr[3]);
+            string document = arr[4];
+            string subbAcct = arr[5];
+            string vendor = arr[6];
+            string item = arr[7];
+            int deposit = Int32.Parse(arr[8]);
+            int expense = Int32.Parse(arr[9]);
+            int year = Int32.Parse(arr[10]);
+            string status = arr[11];
+            string comment = arr[12];
+
+
+
+
+            string sqlCMD = "INSERT INTO REGISTER (CODE, ACCOUNTID, DATE, DOCUMENT, SUBACCT, VENDOR, ITEM, DEPOSIT, EXPENSE, FISCALYEAR, STATUS, COMMENT, PENDING) VALUES (" + code + "," + accountID + "," + date + ", '" + document + "','" + subbAcct + "','" + vendor + "','" + item + "'," + deposit + "," + expense + "," + year + ",'" + status + "','" + comment + "'";
+
+
+            try
+            {
+                using (SqlConnection myConnection = new SqlConnection(connString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(sqlCMD, myConnection))
+                    {
+                        myConnection.Open();
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Exception: " + ex.Message);
+            }
+        }
+
     }
 }
