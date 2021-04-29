@@ -49,7 +49,7 @@ namespace AgAccoutingSystem
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ExitBttn);
             this.Name = "System_Admin_Screen";
-            this.Text = "System_Admin_Screen";
+            this.Text = "Admin";
             this.ResumeLayout(false);
 
         }
