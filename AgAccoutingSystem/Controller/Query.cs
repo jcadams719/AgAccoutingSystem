@@ -37,6 +37,31 @@ namespace AgAccoutingSystem
             return transactions;
         }
 
+        public DataTable getTransaction()
+        {
+            string getTrans = "SELECT * FROM REGISTER LEFT JOIN ACCOUNTS ON REGISTER.ACCOUNTID = ACCOUNTS.ACCOUNTID WHERE REGISTER.PENDING = 1";
+            DataTable transactions = new DataTable();
+            try
+            {
+                using (SqlConnection myConnection = new SqlConnection(connString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(getTrans, myConnection))
+                    {
+                        myConnection.Open();
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        transactions.Load(reader);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Exception: " + ex.Message);
+            }
+
+
+            return transactions;
+        }
+
         public DataTable getAccounts(string userID)
         {
             string getAccts = "SELECT * FROM ACCOUNTS LEFT JOIN USERACCOUNTS ON ACCOUNTS.ACCOUNTID = USERACCOUNTS.ACCOUNTID WHERE USERACCOUNTS.USERID = '" + userID +"'";

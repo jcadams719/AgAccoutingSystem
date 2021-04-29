@@ -35,5 +35,10 @@ namespace AgAccoutingSystem
         {
 
         }
+
+        private void SubmissionFrm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

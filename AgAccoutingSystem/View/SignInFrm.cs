@@ -39,6 +39,7 @@ namespace AgAccoutingSystem
                 if(user.Discipline == "Accountant")
                 {
                     var accountant = new Accountant_Screen();
+                    accountant.getUser(user.UserID);
                     accountant.Show();
                     this.Hide();
                 }

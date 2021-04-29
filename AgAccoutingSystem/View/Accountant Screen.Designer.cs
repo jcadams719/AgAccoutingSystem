@@ -62,6 +62,7 @@ namespace AgAccoutingSystem
             this.Controls.Add(this.ExitBttn);
             this.Name = "Accountant_Screen";
             this.Text = "Accountant";
+            this.Load += new System.EventHandler(this.Accountant_Screen_Load);
             this.ResumeLayout(false);
 
         }

@@ -12,9 +12,16 @@ namespace AgAccoutingSystem
 {
     public partial class Accountant_Screen : Form
     {
+
+        private string userID;
         public Accountant_Screen()
         {
             InitializeComponent();
+        }
+
+        public void getUser(string UserID)
+        {
+            userID = UserID;
         }
 
         private void ExitBttn_Click(object sender, EventArgs e)
@@ -27,8 +34,14 @@ namespace AgAccoutingSystem
         private void button1_Click(object sender, EventArgs e)
         {
             var viewSub = new ViewSubmissions();
+            viewSub.getID(userID);
             viewSub.Show();
             this.Hide();
+        }
+
+        private void Accountant_Screen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

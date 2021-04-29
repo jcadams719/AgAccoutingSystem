@@ -62,6 +62,7 @@ namespace AgAccoutingSystem
             this.Controls.Add(this.ExitBttn);
             this.Name = "SubmissionFrm";
             this.Text = "SubmissionFrm";
+            this.Load += new System.EventHandler(this.SubmissionFrm_Load);
             this.ResumeLayout(false);
 
         }
