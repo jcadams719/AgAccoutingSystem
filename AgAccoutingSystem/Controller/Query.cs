@@ -89,11 +89,9 @@ namespace AgAccoutingSystem
 
         public void submitTransaction(string[] arr)
         {
-
-
             int code = Int32.Parse(arr[1]);
             int accountID = Int32.Parse(arr[2]);
-            DateTime date = Convert.ToDateTime(arr[3]);
+            string date = arr[3];
             string document = arr[4];
             string subbAcct = arr[5];
             string vendor = arr[6];
@@ -104,11 +102,7 @@ namespace AgAccoutingSystem
             string status = arr[11];
             string comment = arr[12];
 
-
-
-
-            string sqlCMD = "INSERT INTO REGISTER (CODE, ACCOUNTID, DATE, DOCUMENT, SUBACCT, VENDOR, ITEM, DEPOSIT, EXPENSE, FISCALYEAR, STATUS, COMMENT, PENDING) VALUES (" + code + "," + accountID + "," + date + ", '" + document + "','" + subbAcct + "','" + vendor + "','" + item + "'," + deposit + "," + expense + "," + year + ",'" + status + "','" + comment + "'";
-
+            string sqlCMD = "INSERT INTO REGISTER (CODE, ACCOUNTID, DATE, DOCUMENT, SUBACCT, VENDOR, ITEM, DEPOSIT, EXPENSE, FISCALYEAR, STATUS, COMMENT, PENDING) VALUES (" + code + "," + accountID + ",'" + date + "', '" + document + "','" + subbAcct + "','" + vendor + "','" + item + "'," + deposit + "," + expense + "," + year + ",'" + status + "','" + comment + "', 1)";
 
             try
             {
@@ -117,16 +111,23 @@ namespace AgAccoutingSystem
                     using (SqlCommand cmd = new SqlCommand(sqlCMD, myConnection))
                     {
                         myConnection.Open();
-                        SqlDataReader reader = cmd.ExecuteReader();
-
+                        cmd.ExecuteNonQuery();
+                        myConnection.Close();
                     }
-
                 }
             }
             catch (Exception ex)
             {
                 throw new ArgumentException("Exception: " + ex.Message);
             }
+        }
+
+        public static DateTime DateParse(string date)
+        {
+            date = date.Trim();
+            if (!string.IsNullOrEmpty(date))
+                return DateTime.Parse(date, new System.Globalization.CultureInfo("en-GB"));
+            return new DateTime();
         }
 
     }

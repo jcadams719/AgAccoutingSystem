@@ -33,15 +33,8 @@ namespace AgAccoutingSystem
 
         private void SubmitBttn_Click(object sender, EventArgs e)
         {
-            string[] submissionArr = new string[15];
-
-            /* for (int i = 0; i <= 12; i++)
-             {
-                 submissionArr[i] = textbox1.Text;
-
-             }*/
-
-            submissionArr[0] = TransactionIDTxt.Text;
+            string[] submissionArr = new string[13];
+            
             submissionArr[1] = CodeTxt.Text;
             submissionArr[2] = AccountIDTxt.Text;
             submissionArr[3] = DateTxt.Text;
@@ -57,7 +50,7 @@ namespace AgAccoutingSystem
             {
                 submissionArr[8] = "0";
             }
-            if (DepositTxt.Text != "")
+            if (ExpenseTxt.Text != "")
             {
                 submissionArr[9] = ExpenseTxt.Text;
             }
