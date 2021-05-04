@@ -34,7 +34,6 @@ namespace AgAccoutingSystem
         private void SubmitBttn_Click(object sender, EventArgs e)
         {
             string[] submissionArr = new string[13];
-            
             submissionArr[1] = CodeTxt.Text;
             submissionArr[2] = AccountIDTxt.Text;
             submissionArr[3] = DateTxt.Text;

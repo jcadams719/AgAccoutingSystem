@@ -71,7 +71,7 @@ namespace AgAccoutingSystem
             this.allAccountsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.allAccountsDataGrid.Location = new System.Drawing.Point(12, 12);
             this.allAccountsDataGrid.Name = "allAccountsDataGrid";
-            this.allAccountsDataGrid.Size = new System.Drawing.Size(1126, 253);
+            this.allAccountsDataGrid.Size = new System.Drawing.Size(446, 253);
             this.allAccountsDataGrid.TabIndex = 6;
             // 
             // ViewTransactionsBttn

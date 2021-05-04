@@ -40,7 +40,7 @@ namespace AgAccoutingSystem
         
         public string[] getUserInfo(string userName)
         {
-            string getInfoQuery = "SELECT USERID, PERMISSIONS, DISCIPLINE FROM USERS WHERE USERID = '" + userName + "'";
+            string getInfoQuery = "SELECT USERID, DISCIPLINE FROM USERS WHERE USERID = '" + userName + "'";
             string[] userInfo = new string[3];
             try
             {
@@ -54,10 +54,8 @@ namespace AgAccoutingSystem
                             while (infoReader.Read())
                             {
                                 string userID = infoReader["USERID"].ToString();
-                                string permissions = infoReader["PERMISSIONS"].ToString();
                                 string discipline = infoReader["DISCIPLINE"].ToString();
                                 userInfo[0] = userID.TrimEnd();
-                                userInfo[1] = permissions.TrimEnd();
                                 userInfo[2] = discipline.TrimEnd();
                             }
                             infoReader.Close();

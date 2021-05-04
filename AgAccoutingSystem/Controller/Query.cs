@@ -89,7 +89,7 @@ namespace AgAccoutingSystem
 
         public DataTable getAllAccounts()
         {
-            string getAllAccts = "SELECT * FROM ACCOUNTS FULL JOIN USERACCOUNTS ON ACCOUNTS.ACCOUNTID = USERACCOUNTS.ACCOUNTID";
+            string getAllAccts = "SELECT * FROM ACCOUNTS";
             DataTable allAccounts = new DataTable();
             try
             {
@@ -147,12 +147,47 @@ namespace AgAccoutingSystem
             }
         }
 
-        public static DateTime DateParse(string date)
+        /*public static DateTime DateParse(string date)
         {
             date = date.Trim();
             if (!string.IsNullOrEmpty(date))
                 return DateTime.Parse(date, new System.Globalization.CultureInfo("en-GB"));
             return new DateTime();
+        }*/
+
+        public void confirmTransaction(string[] arr)
+        {
+            int transactionID = Int32.Parse(arr[0]);
+            int code = Int32.Parse(arr[1]);
+            int accountID = Int32.Parse(arr[2]);
+            string date = arr[3];
+            string document = arr[4];
+            string subbAcct = arr[5];
+            string vendor = arr[6];
+            string item = arr[7];
+            int deposit = Int32.Parse(arr[8]);
+            int expense = Int32.Parse(arr[9]);
+            int year = Int32.Parse(arr[10]);
+            string status = arr[11];
+            string comment = arr[12];
+
+            string sqlCMD = "UPDATE REGISTER SET CODE = " + code + ", ACCOUNTID = " + accountID + ", DATE = '" + date + "', DOCUMENT = '" + document + "', SUBACCT = '" + subbAcct + "', VENDOR = '" + vendor + "', ITEM = '" + item + "', DEPOSIT = " + deposit + ", EXPENSE = " + expense + ", FISCALYEAR = " + year + ", STATUS = '" + status + "', COMMENT = '" + comment + "', PENDING = 0 WHERE TRANSACTIONID = " + transactionID;
+            try
+            {
+                using (SqlConnection myConnection = new SqlConnection(connString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(sqlCMD, myConnection))
+                    {
+                        myConnection.Open();
+                        cmd.ExecuteNonQuery();
+                        myConnection.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Exception: " + ex.Message);
+            }
         }
 
     }
