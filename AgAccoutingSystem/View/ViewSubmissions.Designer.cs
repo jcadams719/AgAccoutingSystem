@@ -38,7 +38,7 @@ namespace AgAccoutingSystem
             // 
             // ConfirmBttn
             // 
-            this.ConfirmBttn.Location = new System.Drawing.Point(585, 373);
+            this.ConfirmBttn.Location = new System.Drawing.Point(585, 389);
             this.ConfirmBttn.Name = "ConfirmBttn";
             this.ConfirmBttn.Size = new System.Drawing.Size(75, 23);
             this.ConfirmBttn.TabIndex = 0;
@@ -47,7 +47,7 @@ namespace AgAccoutingSystem
             // 
             // ExitBttn
             // 
-            this.ExitBttn.Location = new System.Drawing.Point(585, 402);
+            this.ExitBttn.Location = new System.Drawing.Point(585, 418);
             this.ExitBttn.Name = "ExitBttn";
             this.ExitBttn.Size = new System.Drawing.Size(156, 23);
             this.ExitBttn.TabIndex = 1;
@@ -57,7 +57,7 @@ namespace AgAccoutingSystem
             // 
             // RejectBttn
             // 
-            this.RejectBttn.Location = new System.Drawing.Point(666, 373);
+            this.RejectBttn.Location = new System.Drawing.Point(666, 389);
             this.RejectBttn.Name = "RejectBttn";
             this.RejectBttn.Size = new System.Drawing.Size(75, 23);
             this.RejectBttn.TabIndex = 3;
@@ -67,7 +67,7 @@ namespace AgAccoutingSystem
             // TransactionsdataGridView
             // 
             this.TransactionsdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TransactionsdataGridView.Location = new System.Drawing.Point(12, 12);
+            this.TransactionsdataGridView.Location = new System.Drawing.Point(12, 28);
             this.TransactionsdataGridView.Name = "TransactionsdataGridView";
             this.TransactionsdataGridView.Size = new System.Drawing.Size(1297, 355);
             this.TransactionsdataGridView.TabIndex = 4;
@@ -76,7 +76,7 @@ namespace AgAccoutingSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 437);
+            this.ClientSize = new System.Drawing.Size(1333, 451);
             this.Controls.Add(this.TransactionsdataGridView);
             this.Controls.Add(this.RejectBttn);
             this.Controls.Add(this.ExitBttn);
