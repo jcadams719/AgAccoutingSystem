@@ -35,5 +35,20 @@ namespace AgAccoutingSystem
             query.getTransaction();
             TransactionsdataGridView.DataSource = query.getTransaction();
         }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfirmBttn_Click(object sender, EventArgs e)
+        {
+            int index = (int)TransactionsdataGridView.SelectedCells[0].Value;
+            DataGridViewRow selectedRow = TransactionsdataGridView.Rows[index];
+            int code = (int)selectedRow.Cells["CODE"].Value;
+            int accountID = (int)selectedRow.Cells["ACCOUNTID"].Value;
+            string date = selectedRow.Cells["DATE"].Value.ToString();
+
+        }
     }
 }

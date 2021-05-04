@@ -44,6 +44,7 @@ namespace AgAccoutingSystem
             this.ConfirmBttn.TabIndex = 0;
             this.ConfirmBttn.Text = "Confirm";
             this.ConfirmBttn.UseVisualStyleBackColor = true;
+            this.ConfirmBttn.Click += new System.EventHandler(this.ConfirmBttn_Click);
             // 
             // ExitBttn
             // 
