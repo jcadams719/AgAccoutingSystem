@@ -53,10 +53,15 @@ namespace AgAccoutingSystem
                 else if(user.Discipline == "Administrator")
                 {
                     var adminScreen = new System_Admin_Screen();
+                    adminScreen.getUserID(user.UserID);
                     adminScreen.Show();
                     this.Hide();
                 }
                 
+            }
+            else
+            {
+                MessageBox.Show("Username or Password was incorrect. Please try again.");
             }
         }
     }

@@ -50,6 +50,7 @@ namespace AgAccoutingSystem
             this.Controls.Add(this.ExitBttn);
             this.Name = "System_Admin_Screen";
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.System_Admin_Screen_Load);
             this.ResumeLayout(false);
 
         }

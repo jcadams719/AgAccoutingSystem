@@ -87,6 +87,31 @@ namespace AgAccoutingSystem
             return accounts;
         }
 
+        public DataTable getAllAccounts()
+        {
+            string getAllAccts = "SELECT * FROM ACCOUNTS FULL JOIN USERACCOUNTS ON ACCOUNTS.ACCOUNTID = USERACCOUNTS.ACCOUNTID";
+            DataTable allAccounts = new DataTable();
+            try
+            {
+                using (SqlConnection myConnection = new SqlConnection(connString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(getAllAccts, myConnection))
+                    {
+                        myConnection.Open();
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        allAccounts.Load(reader);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Exception: " + ex.Message);
+            }
+
+            return allAccounts;
+        }
+
         public void submitTransaction(string[] arr)
         {
             int code = Int32.Parse(arr[1]);

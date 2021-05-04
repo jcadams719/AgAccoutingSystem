@@ -31,6 +31,7 @@ namespace AgAccoutingSystem
             this.Hide();
         }
 
+        // *VIEW SUBMISSIONS CLICK*
         private void button1_Click(object sender, EventArgs e)
         {
             var viewSub = new ViewSubmissions();
@@ -41,7 +42,15 @@ namespace AgAccoutingSystem
 
         private void Accountant_Screen_Load(object sender, EventArgs e)
         {
+            Query query = new Query();
+            allAccountsDataGrid.DataSource = query.getAllAccounts();
+        }
 
+        private void ViewTransactionsBttn_Click(object sender, EventArgs e)
+        {
+            int accountNum = (int)allAccountsDataGrid.SelectedCells[0].Value;
+            Query query = new Query();
+            accountantViewTransactionsDataGrid.DataSource = query.getTransaction(accountNum);
         }
     }
 }
