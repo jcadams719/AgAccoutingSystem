@@ -29,10 +29,16 @@ namespace AgAccoutingSystem
         }
         private void GetTransactionBttn_Click(object sender, EventArgs e)
         {
-            int accountNum = (int)aCCOUNTSDataGridView.SelectedCells[0].Value;
-            Query query = new Query();
-            TransactionDataGridView.DataSource = query.getTransaction(accountNum);
-            
+            try
+            {
+                int accountNum = (int)aCCOUNTSDataGridView.SelectedCells[0].Value;
+                Query query = new Query();
+                TransactionDataGridView.DataSource = query.getTransaction(accountNum);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Must select ACCOUNTID to view transactions.");
+            }
         }
 
         private void GetAccountsBttn_Click(object sender, EventArgs e)

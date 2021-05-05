@@ -55,6 +55,7 @@ namespace AgAccoutingSystem
             this.DateLabel = new System.Windows.Forms.Label();
             this.AccountIDLabel = new System.Windows.Forms.Label();
             this.CodeLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ExitBttn
@@ -246,7 +247,7 @@ namespace AgAccoutingSystem
             // DateLabel
             // 
             this.DateLabel.AutoSize = true;
-            this.DateLabel.Location = new System.Drawing.Point(18, 98);
+            this.DateLabel.Location = new System.Drawing.Point(31, 85);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(33, 13);
             this.DateLabel.TabIndex = 31;
@@ -270,11 +271,21 @@ namespace AgAccoutingSystem
             this.CodeLabel.TabIndex = 29;
             this.CodeLabel.Text = "Code:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "(YYYY-MM-DD)";
+            // 
             // SubmissionFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 552);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.CommentTxt);
             this.Controls.Add(this.YearTxt);
             this.Controls.Add(this.StatusTxt);
@@ -337,5 +348,6 @@ namespace AgAccoutingSystem
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Label AccountIDLabel;
         private System.Windows.Forms.Label CodeLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

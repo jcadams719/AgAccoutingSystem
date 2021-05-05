@@ -48,9 +48,16 @@ namespace AgAccoutingSystem
 
         private void ViewTransactionsBttn_Click(object sender, EventArgs e)
         {
-            int accountNum = (int)allAccountsDataGrid.SelectedCells[0].Value;
-            Query query = new Query();
-            accountantViewTransactionsDataGrid.DataSource = query.getTransaction(accountNum);
+            try
+            {
+                int accountNum = (int)allAccountsDataGrid.SelectedCells[0].Value;
+                Query query = new Query();
+                accountantViewTransactionsDataGrid.DataSource = query.getTransaction(accountNum);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Must select ACCOUNTID to view transactions.");
+            }
         }
     }
 }

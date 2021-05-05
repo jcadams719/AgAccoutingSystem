@@ -27,12 +27,20 @@ namespace AgAccoutingSystem
 
         private void System_Admin_Screen_Load(object sender, EventArgs e)
         {
-
+            Query query = new Query();
+            adminAllAccountsDataGrid.DataSource = query.getAllAccounts();
         }
 
         public void getUserID(string UserID)
         {
             userID = UserID;
+        }
+
+        private void adminViewSubmissionButton_Click(object sender, EventArgs e)
+        {
+            int accountNum = (int)adminAllAccountsDataGrid.SelectedCells[0].Value;
+            Query query = new Query();
+            adminViewTransactionsDataGrid.DataSource = query.getTransaction(accountNum);
         }
     }
 }
