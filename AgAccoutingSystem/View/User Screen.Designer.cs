@@ -154,7 +154,7 @@ namespace AgAccoutingSystem
             this.aCCOUNTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.aCCOUNTSDataGridView.Location = new System.Drawing.Point(12, 3);
             this.aCCOUNTSDataGridView.Name = "aCCOUNTSDataGridView";
-            this.aCCOUNTSDataGridView.Size = new System.Drawing.Size(445, 180);
+            this.aCCOUNTSDataGridView.Size = new System.Drawing.Size(746, 180);
             this.aCCOUNTSDataGridView.TabIndex = 4;
             // 
             // User_Screen
