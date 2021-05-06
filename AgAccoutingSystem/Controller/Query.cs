@@ -67,7 +67,7 @@ namespace AgAccoutingSystem
 
         public DataTable getAccounts(string userID)
         {
-            string getAccts = "SELECT * FROM ACCOUNTS LEFT JOIN USERACCOUNTS ON ACCOUNTS.ACCOUNTID = USERACCOUNTS.ACCOUNTID WHERE USERACCOUNTS.USERID = '" + userID +"'";
+            string getAccts = "SELECT ACCOUNTS.ACCOUNTID, ACCOUNTS.RESEARCHCENTER, ACCOUNTS.TYPE, ACCOUNTS.BALANCE FROM ACCOUNTS INNER JOIN USERACCOUNTS ON ACCOUNTS.ACCOUNTID = USERACCOUNTS.ACCOUNTID WHERE USERACCOUNTS.USERID = '" + userID +"'";
             DataTable accounts = new DataTable();
             try
             {
@@ -79,14 +79,12 @@ namespace AgAccoutingSystem
                         SqlDataReader reader = cmd.ExecuteReader();
                         accounts.Load(reader);
                     }
-
                 }
             }
             catch (Exception ex)
             {
                 throw new ArgumentException("Exception: " + ex.Message);
             }
-
             return accounts;
         }
 

@@ -56,7 +56,7 @@ namespace AgAccoutingSystem
             // 
             // SubmitTransBttn
             // 
-            this.SubmitTransBttn.Location = new System.Drawing.Point(335, 393);
+            this.SubmitTransBttn.Location = new System.Drawing.Point(335, 391);
             this.SubmitTransBttn.Name = "SubmitTransBttn";
             this.SubmitTransBttn.Size = new System.Drawing.Size(153, 39);
             this.SubmitTransBttn.TabIndex = 0;
@@ -66,7 +66,7 @@ namespace AgAccoutingSystem
             // 
             // ExitBttn
             // 
-            this.ExitBttn.Location = new System.Drawing.Point(494, 393);
+            this.ExitBttn.Location = new System.Drawing.Point(494, 391);
             this.ExitBttn.Name = "ExitBttn";
             this.ExitBttn.Size = new System.Drawing.Size(153, 39);
             this.ExitBttn.TabIndex = 1;
@@ -76,7 +76,7 @@ namespace AgAccoutingSystem
             // 
             // GetTransactionBttn
             // 
-            this.GetTransactionBttn.Location = new System.Drawing.Point(176, 393);
+            this.GetTransactionBttn.Location = new System.Drawing.Point(176, 391);
             this.GetTransactionBttn.Name = "GetTransactionBttn";
             this.GetTransactionBttn.Size = new System.Drawing.Size(153, 39);
             this.GetTransactionBttn.TabIndex = 3;
@@ -156,14 +156,14 @@ namespace AgAccoutingSystem
             this.aCCOUNTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.aCCOUNTSDataGridView.Location = new System.Drawing.Point(12, 3);
             this.aCCOUNTSDataGridView.Name = "aCCOUNTSDataGridView";
-            this.aCCOUNTSDataGridView.Size = new System.Drawing.Size(746, 180);
+            this.aCCOUNTSDataGridView.Size = new System.Drawing.Size(407, 180);
             this.aCCOUNTSDataGridView.TabIndex = 4;
             // 
             // User_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 452);
+            this.ClientSize = new System.Drawing.Size(775, 442);
             this.Controls.Add(this.aCCOUNTSDataGridView);
             this.Controls.Add(this.TransactionDataGridView);
             this.Controls.Add(this.GetTransactionBttn);

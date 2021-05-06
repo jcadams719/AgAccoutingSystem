@@ -35,7 +35,6 @@ namespace AgAccoutingSystem
             get { return date; }
             set { date = value; }
         }
-
         private string document;
         public string Document
         {
@@ -57,7 +56,6 @@ namespace AgAccoutingSystem
             get { return vendor; }
             set { vendor = value; }
         }
-
         private string item; 
         public string Item
         {
@@ -65,7 +63,6 @@ namespace AgAccoutingSystem
             set { item = value; }
 
         }
-
         private float deposit;
         public float Deposit
         {
