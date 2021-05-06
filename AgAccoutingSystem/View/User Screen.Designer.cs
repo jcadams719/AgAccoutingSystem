@@ -86,6 +86,7 @@ namespace AgAccoutingSystem
             // 
             // TransactionDataGridView
             // 
+            this.TransactionDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.TransactionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TransactionDataGridView.Location = new System.Drawing.Point(12, 189);
             this.TransactionDataGridView.Name = "TransactionDataGridView";
@@ -151,6 +152,7 @@ namespace AgAccoutingSystem
             // 
             // aCCOUNTSDataGridView
             // 
+            this.aCCOUNTSDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.aCCOUNTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.aCCOUNTSDataGridView.Location = new System.Drawing.Point(12, 3);
             this.aCCOUNTSDataGridView.Name = "aCCOUNTSDataGridView";
