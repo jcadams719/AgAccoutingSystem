@@ -42,7 +42,7 @@ namespace AgAccoutingSystem
 
         public DataTable getTransaction()
         {
-            string getTrans = "SELECT * FROM REGISTER LEFT JOIN ACCOUNTS ON REGISTER.ACCOUNTID = ACCOUNTS.ACCOUNTID WHERE REGISTER.PENDING = 1";
+            string getTrans = "SELECT * FROM REGISTER WHERE PENDING = 1";
             DataTable transactions = new DataTable();
             try
             {
