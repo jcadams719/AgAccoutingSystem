@@ -30,6 +30,7 @@ namespace AgAccoutingSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User_Screen));
             this.SubmitTransBttn = new System.Windows.Forms.Button();
             this.ExitBttn = new System.Windows.Forms.Button();
             this.GetTransactionBttn = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@ namespace AgAccoutingSystem
             this.aCCOUNTSDataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.TransactionDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gROUP4DataSet)).BeginInit();
@@ -54,6 +56,7 @@ namespace AgAccoutingSystem
             ((System.ComponentModel.ISupportInitialize)(this.agDatabase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTSDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // SubmitTransBttn
@@ -179,11 +182,22 @@ namespace AgAccoutingSystem
             this.label2.TabIndex = 6;
             this.label2.Text = "Transactions";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(495, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(205, 180);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // User_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 476);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.aCCOUNTSDataGridView);
@@ -201,6 +215,7 @@ namespace AgAccoutingSystem
             ((System.ComponentModel.ISupportInitialize)(this.agDatabase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTSDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +240,6 @@ namespace AgAccoutingSystem
         private System.Windows.Forms.DataGridView aCCOUNTSDataGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
