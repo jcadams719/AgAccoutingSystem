@@ -29,6 +29,9 @@ namespace AgAccoutingSystem
         {
             Query query = new Query();
             adminAllAccountsDataGrid.DataSource = query.getAllAccounts();
+
+            Query query2 = new Query();
+            DisciplineDataGrid.DataSource = query2.userDiscipline();
         }
 
         public void getUserID(string UserID)
@@ -41,6 +44,45 @@ namespace AgAccoutingSystem
             int accountNum = (int)adminAllAccountsDataGrid.SelectedCells[0].Value;
             Query query = new Query();
             adminViewTransactionsDataGrid.DataSource = query.getTransaction(accountNum);
+        }
+
+        private void ChangeBttn_Click(object sender, EventArgs e)
+        {
+
+            if(UserRB.Checked || AccountantRB.Checked || SysAdminRB.Checked)
+            {
+                string[] variables = new string[5];
+                int index = (int)DisciplineDataGrid.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = DisciplineDataGrid.Rows[index];
+                variables[0] = selectedRow.Cells["USERID"].Value.ToString().Trim();
+                variables[1] = selectedRow.Cells["NAME"].Value.ToString().Trim();
+
+                if (SysAdminRB.Checked)
+                {
+                    variables[2] = SysAdminRB.Text;
+                }
+                else if (UserRB.Checked)
+                {
+                    variables[2] = UserRB.Text;
+                }
+                else if (AccountantRB.Checked)
+                {
+                    variables[2] = AccountantRB.Text;
+                }
+
+
+                Query query = new Query();
+                query.changeDiscipline(variables);
+
+                var newView = new System_Admin_Screen();
+                newView.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please select a button.");
+            }
+            
         }
     }
 }

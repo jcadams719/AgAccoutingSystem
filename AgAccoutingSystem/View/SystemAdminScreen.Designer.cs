@@ -33,7 +33,7 @@ namespace AgAccoutingSystem
             this.adminViewSubmissionButton = new System.Windows.Forms.Button();
             this.adminViewTransactionsDataGrid = new System.Windows.Forms.DataGridView();
             this.adminAllAccountsDataGrid = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DisciplineDataGrid = new System.Windows.Forms.DataGridView();
             this.SysAdminRB = new System.Windows.Forms.RadioButton();
             this.UserRB = new System.Windows.Forms.RadioButton();
             this.AccountantRB = new System.Windows.Forms.RadioButton();
@@ -44,7 +44,7 @@ namespace AgAccoutingSystem
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.adminViewTransactionsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminAllAccountsDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisciplineDataGrid)).BeginInit();
             this.DisciplineGB.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -85,26 +85,27 @@ namespace AgAccoutingSystem
             this.adminAllAccountsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.adminAllAccountsDataGrid.Location = new System.Drawing.Point(12, 31);
             this.adminAllAccountsDataGrid.Name = "adminAllAccountsDataGrid";
-            this.adminAllAccountsDataGrid.Size = new System.Drawing.Size(434, 258);
+            this.adminAllAccountsDataGrid.Size = new System.Drawing.Size(418, 258);
             this.adminAllAccountsDataGrid.TabIndex = 4;
             // 
-            // dataGridView1
+            // DisciplineDataGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(231, 258);
-            this.dataGridView1.TabIndex = 7;
+            this.DisciplineDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.DisciplineDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DisciplineDataGrid.Location = new System.Drawing.Point(6, 25);
+            this.DisciplineDataGrid.Name = "DisciplineDataGrid";
+            this.DisciplineDataGrid.Size = new System.Drawing.Size(347, 258);
+            this.DisciplineDataGrid.TabIndex = 7;
             // 
             // SysAdminRB
             // 
             this.SysAdminRB.AutoSize = true;
             this.SysAdminRB.Location = new System.Drawing.Point(6, 20);
             this.SysAdminRB.Name = "SysAdminRB";
-            this.SysAdminRB.Size = new System.Drawing.Size(91, 17);
+            this.SysAdminRB.Size = new System.Drawing.Size(85, 17);
             this.SysAdminRB.TabIndex = 8;
             this.SysAdminRB.TabStop = true;
-            this.SysAdminRB.Text = "System Admin";
+            this.SysAdminRB.Text = "Administrator";
             this.SysAdminRB.UseVisualStyleBackColor = true;
             // 
             // UserRB
@@ -134,33 +135,34 @@ namespace AgAccoutingSystem
             this.DisciplineGB.Controls.Add(this.UserRB);
             this.DisciplineGB.Controls.Add(this.AccountantRB);
             this.DisciplineGB.Controls.Add(this.SysAdminRB);
-            this.DisciplineGB.Location = new System.Drawing.Point(243, 79);
+            this.DisciplineGB.Location = new System.Drawing.Point(359, 83);
             this.DisciplineGB.Name = "DisciplineGB";
-            this.DisciplineGB.Size = new System.Drawing.Size(123, 107);
+            this.DisciplineGB.Size = new System.Drawing.Size(101, 107);
             this.DisciplineGB.TabIndex = 11;
             this.DisciplineGB.TabStop = false;
-            this.DisciplineGB.Text = "Discipline";
+            this.DisciplineGB.Text = "Select Discipline";
             // 
             // ChangeBttn
             // 
-            this.ChangeBttn.Location = new System.Drawing.Point(243, 192);
+            this.ChangeBttn.Location = new System.Drawing.Point(359, 196);
             this.ChangeBttn.Name = "ChangeBttn";
-            this.ChangeBttn.Size = new System.Drawing.Size(123, 29);
+            this.ChangeBttn.Size = new System.Drawing.Size(101, 29);
             this.ChangeBttn.TabIndex = 12;
             this.ChangeBttn.Text = "Change Discipline";
             this.ChangeBttn.UseVisualStyleBackColor = true;
+            this.ChangeBttn.Click += new System.EventHandler(this.ChangeBttn_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.ChangeBttn);
             this.groupBox1.Controls.Add(this.DisciplineGB);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(452, 12);
+            this.groupBox1.Controls.Add(this.DisciplineDataGrid);
+            this.groupBox1.Location = new System.Drawing.Point(438, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(382, 287);
+            this.groupBox1.Size = new System.Drawing.Size(466, 283);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Discipline";
             // 
             // label1
             // 
@@ -184,7 +186,7 @@ namespace AgAccoutingSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 663);
+            this.ClientSize = new System.Drawing.Size(975, 663);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -197,7 +199,7 @@ namespace AgAccoutingSystem
             this.Load += new System.EventHandler(this.System_Admin_Screen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.adminViewTransactionsDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminAllAccountsDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisciplineDataGrid)).EndInit();
             this.DisciplineGB.ResumeLayout(false);
             this.DisciplineGB.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -212,7 +214,7 @@ namespace AgAccoutingSystem
         private System.Windows.Forms.Button adminViewSubmissionButton;
         private System.Windows.Forms.DataGridView adminViewTransactionsDataGrid;
         private System.Windows.Forms.DataGridView adminAllAccountsDataGrid;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DisciplineDataGrid;
         private System.Windows.Forms.RadioButton SysAdminRB;
         private System.Windows.Forms.RadioButton UserRB;
         private System.Windows.Forms.RadioButton AccountantRB;

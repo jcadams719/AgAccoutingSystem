@@ -69,5 +69,18 @@ namespace AgAccoutingSystem
             newView.Show();
             this.Hide();
         }
+
+        private void RejectBttn_Click(object sender, EventArgs e)
+        {
+            int index = (int)TransactionsdataGridView.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = TransactionsdataGridView.Rows[index];
+            int transID = (int)selectedRow.Cells["TRANSACTIONID"].Value;
+            Query query = new Query();
+            query.deleteSubmission(transID);
+
+            var newView = new ViewSubmissions();
+            newView.Show();
+            this.Hide();
+        }
     }
 }

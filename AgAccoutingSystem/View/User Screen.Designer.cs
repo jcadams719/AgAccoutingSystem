@@ -45,6 +45,8 @@ namespace AgAccoutingSystem
             this.aCCOUNTSTableAdapter1 = new AgAccoutingSystem.AgDatabaseTableAdapters.ACCOUNTSTableAdapter();
             this.tableAdapterManager1 = new AgAccoutingSystem.AgDatabaseTableAdapters.TableAdapterManager();
             this.aCCOUNTSDataGridView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TransactionDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gROUP4DataSet)).BeginInit();
@@ -56,7 +58,7 @@ namespace AgAccoutingSystem
             // 
             // SubmitTransBttn
             // 
-            this.SubmitTransBttn.Location = new System.Drawing.Point(335, 391);
+            this.SubmitTransBttn.Location = new System.Drawing.Point(336, 425);
             this.SubmitTransBttn.Name = "SubmitTransBttn";
             this.SubmitTransBttn.Size = new System.Drawing.Size(153, 39);
             this.SubmitTransBttn.TabIndex = 0;
@@ -66,7 +68,7 @@ namespace AgAccoutingSystem
             // 
             // ExitBttn
             // 
-            this.ExitBttn.Location = new System.Drawing.Point(494, 391);
+            this.ExitBttn.Location = new System.Drawing.Point(495, 425);
             this.ExitBttn.Name = "ExitBttn";
             this.ExitBttn.Size = new System.Drawing.Size(153, 39);
             this.ExitBttn.TabIndex = 1;
@@ -76,7 +78,7 @@ namespace AgAccoutingSystem
             // 
             // GetTransactionBttn
             // 
-            this.GetTransactionBttn.Location = new System.Drawing.Point(176, 391);
+            this.GetTransactionBttn.Location = new System.Drawing.Point(177, 425);
             this.GetTransactionBttn.Name = "GetTransactionBttn";
             this.GetTransactionBttn.Size = new System.Drawing.Size(153, 39);
             this.GetTransactionBttn.TabIndex = 3;
@@ -88,7 +90,7 @@ namespace AgAccoutingSystem
             // 
             this.TransactionDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.TransactionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TransactionDataGridView.Location = new System.Drawing.Point(12, 189);
+            this.TransactionDataGridView.Location = new System.Drawing.Point(15, 224);
             this.TransactionDataGridView.Name = "TransactionDataGridView";
             this.TransactionDataGridView.Size = new System.Drawing.Size(746, 186);
             this.TransactionDataGridView.TabIndex = 4;
@@ -154,16 +156,36 @@ namespace AgAccoutingSystem
             // 
             this.aCCOUNTSDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.aCCOUNTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.aCCOUNTSDataGridView.Location = new System.Drawing.Point(12, 3);
+            this.aCCOUNTSDataGridView.Location = new System.Drawing.Point(15, 25);
             this.aCCOUNTSDataGridView.Name = "aCCOUNTSDataGridView";
             this.aCCOUNTSDataGridView.Size = new System.Drawing.Size(407, 180);
             this.aCCOUNTSDataGridView.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Accounts";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 208);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Transactions";
             // 
             // User_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 442);
+            this.ClientSize = new System.Drawing.Size(775, 476);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.aCCOUNTSDataGridView);
             this.Controls.Add(this.TransactionDataGridView);
             this.Controls.Add(this.GetTransactionBttn);
@@ -180,6 +202,7 @@ namespace AgAccoutingSystem
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTSDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -200,5 +223,7 @@ namespace AgAccoutingSystem
         private AgDatabaseTableAdapters.ACCOUNTSTableAdapter aCCOUNTSTableAdapter1;
         private AgDatabaseTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.DataGridView aCCOUNTSDataGridView;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

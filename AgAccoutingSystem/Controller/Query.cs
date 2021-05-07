@@ -191,5 +191,79 @@ namespace AgAccoutingSystem
             }
         }
 
+
+        public DataTable userDiscipline()
+        {
+            string sqlCMD = "SELECT USERID, NAME, DISCIPLINE FROM USERS";
+            DataTable userDiscipline = new DataTable();
+            try
+            {
+                using (SqlConnection myConnection = new SqlConnection(connString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(sqlCMD, myConnection))
+                    {
+                        myConnection.Open();
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        userDiscipline.Load(reader);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Exception: " + ex.Message);
+            }
+            return userDiscipline;
+        }
+
+        public void changeDiscipline(string[] arr)
+        {
+            string userID = arr[0];
+            string name = arr[1];
+            string discipline = arr[2];
+
+
+            //woops sorry boys
+            string sqlCMD = "UPDATE USERS SET DISCIPLINE = '" + discipline +"' WHERE USERID = '" + userID + "'";
+            try
+            {
+                using (SqlConnection myConnection = new SqlConnection(connString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(sqlCMD, myConnection))
+                    {
+                        myConnection.Open();
+                        cmd.ExecuteNonQuery();
+                        myConnection.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Exception: " + ex.Message);
+            }
+
+        }
+
+        public void deleteSubmission(int transID)
+        {
+            string sqlCMD = "DELETE FROM REGISTER WHERE TRANSACTIONID = " + transID;
+            try
+            {
+                using (SqlConnection myConnection = new SqlConnection(connString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(sqlCMD, myConnection))
+                    {
+                        myConnection.Open();
+                        cmd.ExecuteNonQuery();
+                        myConnection.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Exception: " + ex.Message);
+            }
+
+        }
+
     }
 }

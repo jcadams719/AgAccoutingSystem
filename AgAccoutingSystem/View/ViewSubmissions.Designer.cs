@@ -64,6 +64,7 @@ namespace AgAccoutingSystem
             this.RejectBttn.TabIndex = 3;
             this.RejectBttn.Text = "Reject";
             this.RejectBttn.UseVisualStyleBackColor = true;
+            this.RejectBttn.Click += new System.EventHandler(this.RejectBttn_Click);
             // 
             // TransactionsdataGridView
             // 
