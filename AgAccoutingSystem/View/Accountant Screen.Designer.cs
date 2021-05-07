@@ -118,6 +118,7 @@ namespace AgAccoutingSystem
             this.AddAcctBttn.TabIndex = 11;
             this.AddAcctBttn.Text = "Add Selected Account";
             this.AddAcctBttn.UseVisualStyleBackColor = true;
+            this.AddAcctBttn.Click += new System.EventHandler(this.AddAcctBttn_Click);
             // 
             // AgPicture
             // 

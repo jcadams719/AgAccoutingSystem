@@ -148,13 +148,6 @@ namespace AgAccoutingSystem
             }
         }
 
-        /*public static DateTime DateParse(string date)
-        {
-            date = date.Trim();
-            if (!string.IsNullOrEmpty(date))
-                return DateTime.Parse(date, new System.Globalization.CultureInfo("en-GB"));
-            return new DateTime();
-        }*/
 
         public void confirmTransaction(string[] arr)
         {
@@ -246,6 +239,28 @@ namespace AgAccoutingSystem
         public void deleteSubmission(int transID)
         {
             string sqlCMD = "DELETE FROM REGISTER WHERE TRANSACTIONID = " + transID;
+            try
+            {
+                using (SqlConnection myConnection = new SqlConnection(connString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(sqlCMD, myConnection))
+                    {
+                        myConnection.Open();
+                        cmd.ExecuteNonQuery();
+                        myConnection.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Exception: " + ex.Message);
+            }
+
+        }
+
+        public void enterAccount(string[] variable)
+        {
+            string sqlCMD = "INSERT INTO ACCOUNTS (ACCOUNTID, RESEARCHCENTER, TYPE, BALANCE) VALUES (" + Int32.Parse(variable[0]) + ", '" + variable[1] + "','" + variable[2] + "', " + Int32.Parse(variable[3])+")";
             try
             {
                 using (SqlConnection myConnection = new SqlConnection(connString))

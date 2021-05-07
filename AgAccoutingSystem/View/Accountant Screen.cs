@@ -59,5 +59,32 @@ namespace AgAccoutingSystem
                 MessageBox.Show("Must select ACCOUNTID to view transactions.");
             }
         }
+
+        private void AddAcctBttn_Click(object sender, EventArgs e)
+        {
+            string[] variables = new string[4];
+            int index = (int)allAccountsDataGrid.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = allAccountsDataGrid.Rows[index];
+
+            variables[0] = selectedRow.Cells["ACCOUNTID"].Value.ToString().Trim();
+            variables[1] = selectedRow.Cells["RESEARCHCENTER"].Value.ToString().Trim();
+            variables[2] = selectedRow.Cells["TYPE"].Value.ToString().Trim();
+            variables[3] = selectedRow.Cells["BALANCE"].Value.ToString().Trim();
+
+            try
+            {
+                Query query = new Query();
+                query.enterAccount(variables);
+
+                var newView = new Accountant_Screen();
+                newView.Show();
+                this.Hide();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Please select an account not already in the database.");
+            }
+            
+        }
     }
 }
